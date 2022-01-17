@@ -19,6 +19,7 @@ module.exports = {
   plugins: [
     '@typescript-eslint',
     'import',
+    'svelte3',
     'jsx-a11y',
     'simple-import-sort',
     'sort-destructure-keys',
@@ -28,6 +29,10 @@ module.exports = {
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: { warnOnUnsupportedTypeScriptVersion: false },
+  overrides: [{ files: ['*.svelte'], processor: 'svelte3/svelte3' }],
+  settings: {
+    'svelte3/typescript': true,
+  },
   rules: {
     '@typescript-eslint/consistent-type-imports': 'error',
     'accessor-pairs': 'error',
