@@ -1,4 +1,4 @@
-/** @type {import('@types/eslint').Linter.Config} */
+/** @type {import('eslint').Linter.Config} */
 module.exports = {
   env: {
     browser: true,
@@ -8,7 +8,6 @@ module.exports = {
     es6: true,
   },
   extends: [
-    'next',
     'plugin:jsx-a11y/recommended',
     'plugin:promise/recommended',
     'plugin:react/jsx-runtime',
